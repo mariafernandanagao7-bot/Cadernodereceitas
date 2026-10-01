@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { Award, BookOpen, CakeSlice, ChefHat, FolderPlus, Search, SlidersHorizontal, Sparkles, Star, Utensils } from "lucide-react";
 import { AppHeader, Badge, images, RecipeCard } from "@/components/atelier";
 import { Button } from "@/components/ui/button";
+import type { LucideIcon } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -22,6 +23,13 @@ const recipes = [
   { image: images.chocolate, tag: "Gourmet especial", title: "Domo de Chocolate Noir & Framboesa", description: "Mousse de chocolate 70%, insert de framboesas silvestres e base crocante de avelãs.", meta: "1h 15min" },
 ];
 
+const metrics: Array<{ value: string; label: string; icon: LucideIcon }> = [
+  { value: "8", label: "Criadas & feitas", icon: CakeSlice },
+  { value: "100%", label: "Taxa de êxito", icon: Award },
+  { value: "4.9", label: "Avaliação média", icon: Star },
+  { value: "Pleno", label: "Grau Pâtissier", icon: ChefHat },
+];
+
 function Notebook() {
   const [filter, setFilter] = useState("Todas");
   const [query, setQuery] = useState("");
@@ -35,7 +43,7 @@ function Notebook() {
           </section>
           <div className="relative"><Search className="absolute left-4 top-3.5 size-4 text-muted-foreground" /><input value={query} onChange={(event) => setQuery(event.target.value)} className="h-11 w-full rounded-full bg-card pl-11 pr-4 text-sm shadow-card outline-none focus:ring-2 focus:ring-ring" placeholder="Buscar em minhas receitas..." /></div>
           <section className="grid grid-cols-2 gap-2">
-            {[["8", "Criadas & feitas", CakeSlice], ["100%", "Taxa de êxito", Award], ["4.9", "Avaliação média", Star], ["Pleno", "Grau Pâtissier", ChefHat]].map(([value, label, Icon]) => <div key={String(label)} className="rounded-lg bg-card p-3 shadow-card"><div className="flex justify-between text-[10px] font-bold uppercase text-muted-foreground"><span>{String(label)}</span><Icon className="size-4 text-primary" /></div><div className="mt-2 font-display text-xl font-semibold">{String(value)}</div></div>)}
+            {metrics.map(({ value, label, icon: Icon }) => <div key={label} className="rounded-lg bg-card p-3 shadow-card"><div className="flex justify-between text-[10px] font-bold uppercase text-muted-foreground"><span>{label}</span><Icon className="size-4 text-primary" /></div><div className="mt-2 font-display text-xl font-semibold">{value}</div></div>)}
           </section>
           <Button asChild className="hidden w-full lg:flex"><Link to="/colecao"><Sparkles className="size-4" /> Abrir coleção em destaque</Link></Button>
         </aside>
