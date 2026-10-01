@@ -2,15 +2,13 @@ import { Link, useRouter } from "@tanstack/react-router";
 import { ArrowLeft, Bell, Bookmark, ChevronRight, Heart, Search, Share2, Sparkles, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const LOGO = "https://lh3.googleusercontent.com/aida/AEtjO1U_vPkJCPN2xdGS1Ff5Chta113x-7fcUT2382mo9p1p91djlLXhYrKPHkbqp0parEQebdInBAXdmQFTbpxxZMd9KARRkMnF6U_Rvf55G_rSOv2D7kmiPQQrqg2h9i7TWODoaAOPVdRXqICT2HQHXHscbDv0xeD5O7hrXpzhZV6fPWqXha_myKGa_fOHOrxH9FDaevEN0KAHizrYSSGUR-wvvuySQoQlAbaZ6xQwON-S2nYhIal0h1Map4E";
-
 export const images = {
   chiffon: "https://lh3.googleusercontent.com/aida-public/AB6AXuDwK9VLLGdgxKTKylX5Q5rg1okxj0OJCNboCCGcdtIWLCjJn-Z5uOv7_faviCk2p4FCix-ang1mRwKhNNnjrzjnY9P_RCZsAXGnn6d-2TSP4LIvvHW7F7VCBw0DnRE8B0Zhlu6xZEQnwACTRD5kbtX8sA14Rv7lw4-p_hpc8IuvlLMq-t5YLxokINcWZNWNVIrL9C7sAEYkP9dcceCCa4XdWNmmRoUBOs8SgcLtdUP-FLjXdDMGs9kq",
-  tart: "https://lh3.googleusercontent.com/aida/AEtjO1UBc6bYflWGVs_qqv6ciUwKDQtlCjx5rTGJCdPLk-KWPFh1Vko2BoWbcX9gbXdBU5uL3bFFUcNOFn2g7oy5hf-hPQ3aE_EaipXmRr1VsC89rAflGnhmnerwabdWJ6_PaySumAl7hIDTLutt-rfWazn4_Pg45blAobp-5Qi_3pXk-HtkH0bYgk_rgRMfYYAdCtT9kjDp-dFK_hcY7raIUUzMPzaDiZA240klIHoagApRqdRLMjMbFDlWAvA",
+  tart: "https://lh3.googleusercontent.com/aida-public/AB6AXuDo4n6Ckd3q7yQ85wBllgUe9HefFYi26yQfBotzIBL8U_y0oo95aG-HajAxY0vl30d6FIQSQN94i3xjfWBwm3FD6dITFbNKwEHCBPapmKruzRQu2PRZY5xBUOSHHAAuVsJnFBi_er3NUt8ALb-jw9fEl8EFahgZi9o89pKa_7k0-DEqthgRkUzmIj0ToyauePbW6NeKViZc21bxecVO6Vh6Gsd8rltfSWovYQkZyOkFsuCwifuK6lnr",
   lemon: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQeWMPikpxJFvrLh239pYa6mSSlDtqKEkAoAo_5_i8GpsJUrIYP_CFzvsvWdupO7X4OQQUQMkCEEwfnrIF9m-E8oTLcv7__WFGI3lnGb4SnCnrhp2rMyJwYKmSwHUtM-2FDKGloqvtvX80sadMKXKdxHlIydRPHqw-szyNnFYh7e_XGmSv0mdOfWWJliruh1_iTkV8KHy07hYW5QvauCOGTG3lWsGuqMCQA4t1NHalUUEcM5CreSfA",
   chocolate: "https://lh3.googleusercontent.com/aida-public/AB6AXuB_ZSUNZZMJLNS11luDO7fQHrVkVN0t9V7v2v3AF78fu5-fi9ITfF6fgqJA2vA9M0ZIvdtg_-xnGj1pl4_2juTKcO2u2gPtLV0U06iJRCAFEXgP85RqLHOEc9UUkUOTd9_VsU-DZss6qVU6e4X8XZ3n1EJY86IGsaowgBH-hMcVYUC0SGGrO4XJIlW_eNe-lbAcfpEbobVTHLwEGzPGQ2r_JA31flK8dyOln0QD8PpgFQqrH78zYqdg",
   meringue: "https://lh3.googleusercontent.com/aida-public/AB6AXuACmWgVDJAVKoPWYb9lZlQKA7vWV-nlxQcJ_1-WLHCjZvhvi7zyugUnYHbMV5vwHFukdBcqNvYgPBcSvZ64BrlP1yIVpXm4656b36JelYapcnqNhgSfdkKvHFKjP9R_Rx8KjWwkXQokLLAo_uNfLQrI4VWNmNC0kRTE9dLiEGNXgKN-yNGFM3xmm7CnOmpQop1A40rF8MUTcmC6Xz_oCwbalpI_PzPPbkQ53_a6J9MITZL7-5wI4Z52",
-  finished: "https://lh3.googleusercontent.com/aida/AEtjO1W2bawkuw2mzwXOb9nHlmzCpzQIcxKWg9WWAuTfdWqpwYuYqGuBhZPt2k8f3lGshSQl9lgp5X2Knvzf20PeiIo1o8BZM7Tm__V9Qk_dRYpF52pGFpkSwkcBGE9VWmQeWti8oFEMk0OdgAQWhlJDCHrFb4avdWekliFf83pC8lSB6qPEspjM11bxCKvfzBr7fRrLGOe4WUL29IPS8DHXIa_dvcu6WzzhDdsX6UEfs0lIEMPxMwYqkokSltE",
+  finished: "https://lh3.googleusercontent.com/aida-public/AB6AXuDwK9VLLGdgxKTKylX5Q5rg1okxj0OJCNboCCGcdtIWLCjJn-Z5uOv7_faviCk2p4FCix-ang1mRwKhNNnjrzjnY9P_RCZsAXGnn6d-2TSP4LIvvHW7F7VCBw0DnRE8B0Zhlu6xZEQnwACTRD5kbtX8sA14Rv7lw4-p_hpc8IuvlLMq-t5YLxokINcWZNWNVIrL9C7sAEYkP9dcceCCa4XdWNmmRoUBOs8SgcLtdUP-FLjXdDMGs9kq",
 };
 
 export function AppHeader({ title = "Meu Caderno de Receitas", back = false }: { title?: string; back?: boolean }) {
@@ -20,7 +18,7 @@ export function AppHeader({ title = "Meu Caderno de Receitas", back = false }: {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <div className="flex min-w-0 items-center gap-2">
           {back && <Button aria-label="Voltar" variant="ghost" size="icon" onClick={() => router.history.back()}><ArrowLeft className="size-5" /></Button>}
-          <img src={LOGO} alt="Símbolo Velvet Atelier" className="h-8 w-auto" />
+          <span aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-secondary text-primary"><CakeSlice className="size-4" /></span>
           <div className="min-w-0">
             <div className="font-display text-lg font-semibold leading-none text-primary">Velvet Atelier</div>
             <div className="mt-1 truncate text-[10px] font-bold uppercase text-muted-foreground">{title}</div>
