@@ -1,5 +1,5 @@
 import { Link, useRouter } from "@tanstack/react-router";
-import { ArrowLeft, Bell, Bookmark, ChevronRight, Heart, Search, Share2, Sparkles, UserRound } from "lucide-react";
+import { ArrowLeft, Bell, Bookmark, CakeSlice, ChevronRight, Heart, Search, Share2, Sparkles, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const images = {
