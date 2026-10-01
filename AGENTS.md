@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Keep the four Velvet Atelier experiences as separate TanStack routes sharing `src/components/atelier.tsx`, so each flow remains directly navigable and visually consistent.
